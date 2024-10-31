@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Watch = () => {
+const Watch = ({watch}) => {
+    const {name, price} =watch;
     return (
         <div>
-            <h2>Watches</h2>
+            <h2>Watch: {name}</h2>
+            <p>Price: {price}</p>
         </div>
     );
 };

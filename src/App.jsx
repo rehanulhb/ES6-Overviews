@@ -1,17 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Watch from './components/Watch/Watch'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
+    const watches =[
+      {id:1, name: 'Apple Watch', price: 200},
+      {id:2, name: 'Samsung Watch', price: 100},
+      {id:3, name: 'MI Watch', price: 50},
+    ]
 
   return (
     <>
       
       <h1>Vite + React</h1>
-      <Watch></Watch>
+      {
+        watches.map(watch=> <Watch key={watch.id} watch={watch}></Watch>)
+      }
       
     </>
   )
